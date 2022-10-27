@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>305 Project</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=8895ebeb03becae9c0808d65e939d70e">
+    <link rel="stylesheet" href="assets/css/Lato.css?h=8cf353c710d972f0a3392a2b4021f08c">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css?h=1ebaba3465f39106375be623a0ebab45">
+    <link rel="stylesheet" href="assets/css/Dark-Mode-Switch.css?h=3790134b8e323d06d49e03f878abddf6">
+    <link rel="stylesheet" href="assets/css/Hero-Clean-Reverse-images.css?h=4f3cfa46e40e236365345fc77963f4b8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/css/Ludens---Dark-Mode-Admin-Dashboard.css?h=e5bb34c3b5956e822962b7170e33f981">
+    <link rel="stylesheet" href="assets/css/Navbar-Centered-Brand-icons.css?h=befd8a398792e305b7ffd4a176b5b585">
+    <link rel="stylesheet" href="assets/css/Navbarbuttonsignupsignin-modal-form-modalform.css?h=879011671e77a61412ac8c1c00717841">
+    <link rel="stylesheet" href="assets/css/Navbarbuttonsignupsignin-modal-form-Navigation-with-Button.css?h=b486ae8ecf6c38e7b0073c57ef30f22f">
+    <link rel="stylesheet" href="assets/css/Navbarbuttonsignupsignin-modal-form.css?h=96481108b4334f48388f4d62dbfcc0e0">
+    <link rel="stylesheet" href="assets/css/sidebar-style4.css?h=c234f943e0d37ce61012bee59767270b">
+    <link rel="stylesheet" href="assets/css/sidebar.css?h=f606b4c1a89dd6df54db0553f4f7d174">
+    <link rel="stylesheet" href="assets/css/Signup-page-with-overlay.css?h=22499ec702aa86f2b223837233dc4445">
+</head>
+
+<body>
+    <!-- Start: Dark Mode Switch -->
+    <div class="row" style="margin-top: 15px;">
+        <div class="col text-center d-flex justify-content-xl-center"><i class="fas fa-moon d-xl-flex align-items-xl-center" style="font-size: 24px;"></i><i class="fas fa-sun d-xl-flex align-items-xl-center" style="font-size: 24px;margin-right: 8px;"></i><div class="custom-control custom-switch"><input class="custom-control-input" type="checkbox" id="darkSwitch" /><label class="custom-control-label" for="darkSwitch"></label></div></div>
+    </div><!-- End: Dark Mode Switch -->
+    <!-- Start: Ludens - Register -->
+    <div class="container" style="position:absolute; left:0; right:0; top: 50%; transform: translateY(-50%); -ms-transform: translateY(-50%); -moz-transform: translateY(-50%); -webkit-transform: translateY(-50%); -o-transform: translateY(-50%);">
+        <div class="row d-flex d-xl-flex justify-content-center justify-content-xl-center">
+            <div class="col-sm-12 col-lg-10 col-xl-9 col-xxl-7 bg-white shadow-lg" style="border-radius: 5px;">
+                <div class="p-5">
+                    <div class="text-center">
+                        <h4 class="text-dark mb-4">Create an Account!</h4>
+                    </div><!-- Start: Register Form -->
+                    <form class="user">
+                        <!-- Start: Username -->
+                        <div class="mb-3"><input class="form-control form-control-user" type="text" placeholder="Username" required=""></div><!-- End: Username -->
+                        <!-- Start: Email -->
+                        <div class="mb-3"><input class="form-control form-control-user" type="email" id="email" placeholder="Email Address" required=""></div><!-- End: Email -->
+                        <!-- Start: Password -->
+                        <div class="row mb-3">
+                            <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="password" id="password" placeholder="Password" required=""></div>
+                            <div class="col-sm-6"><input class="form-control form-control-user" type="password" id="verifyPassword" placeholder="Repeat Password" required=""></div>
+                        </div><!-- End: Password -->
+                        <!-- Start: Names -->
+                        <div class="row mb-3">
+                            <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="text" placeholder="First Name" required=""></div>
+                            <div class="col-sm-6"><input class="form-control form-control-user" type="text" placeholder="Last Name" required=""></div>
+                        </div><!-- End: Names -->
+                        <!-- Start: Email Error Message -->
+                        <div class="row mb-3">
+                            <p id="emailErrorMsg" class="text-danger" style="display:none;">Paragraph</p>
+                            <p id="passwordErrorMsg" class="text-danger" style="display:none;">Paragraph</p>
+                        </div><!-- End: Email Error Message --><button class="btn btn-primary d-block btn-user w-100" id="submitBtn" type="submit">Register Account</button>
+                        <hr>
+                    </form><!-- End: Register Form -->
+                    <!-- Start: Forgot Password -->
+                    <div class="text-center"><a class="small" href="forgot-password.html">Forgot Password?</a></div><!-- End: Forgot Password -->
+                    <!-- Start: Login -->
+                    <div class="text-center"><a class="small" href="login.html">Already have an account? Login!</a></div><!-- End: Login -->
+                </div>
+            </div>
+        </div><script>
+	let email = document.getElementById("email")
+	let password = document.getElementById("password")
+	let verifyPassword = document.getElementById("verifyPassword")
+	let submitBtn = document.getElementById("submitBtn")
+	let emailErrorMsg = document.getElementById('emailErrorMsg')
+	let passwordErrorMsg = document.getElementById('passwordErrorMsg')
+
+	function displayErrorMsg(type, msg) {
+		if(type == "email") {
+			emailErrorMsg.style.display = "block"
+			emailErrorMsg.innerHTML = msg
+			submitBtn.disabled = true
+		}
+		else {
+			passwordErrorMsg.style.display = "block"
+			passwordErrorMsg.innerHTML = msg
+			submitBtn.disabled = true
+		}
+	}
+
+	function hideErrorMsg(type) {
+		if(type == "email") {
+			emailErrorMsg.style.display = "none"
+			emailErrorMsg.innerHTML = ""
+			submitBtn.disabled = true
+			if(passwordErrorMsg.innerHTML == "")
+				submitBtn.disabled = false
+		}
+		else {
+			passwordErrorMsg.style.display = "none"
+			passwordErrorMsg.innerHTML = ""
+			if(emailErrorMsg.innerHTML == "")
+				submitBtn.disabled = false
+		}
+	}
+	
+	// Validate password upon change
+	password.addEventListener("change", function() {
+
+		// If password has no value, then it won't be changed and no error will be displayed
+		if(password.value.length == 0 && verifyPassword.value.length == 0) hideErrorMsg("password")
+		
+		// If password has a value, then it will be checked. In this case the passwords don't match
+		else if(password.value !== verifyPassword.value) displayErrorMsg("password", "Passwords do not match")
+		
+		// When the passwords match, we check the length
+		else {
+			// Check if the password has 8 characters or more
+			if(password.value.length >= 8)
+				hideErrorMsg("password")
+			else
+				displayErrorMsg("password", "Password must be at least 8 characters long")
+		}
+	})
+	
+	verifyPassword.addEventListener("change", function() {
+		if(password.value !== verifyPassword.value)
+			displayErrorMsg("password", "Passwords do not match")
+		else {
+			// Check if the password has 8 characters or more
+			if(password.value.length >= 8)
+				hideErrorMsg("password")
+			else
+				displayErrorMsg("password", "Password must be at least 8 characters long")
+		}
+	})
+
+	// Validate email upon change
+	email.addEventListener("change", function() {
+		// Check if the email is valid using a regular expression (string@string.string)
+		if(email.value.match(/^[^@]+@[^@]+\.[^@]+$/))
+			hideErrorMsg("email")
+		else
+			displayErrorMsg("email", "Invalid email")
+	});
+</script>
+    </div><!-- End: Ludens - Register -->
+    <script src="assets/bootstrap/js/bootstrap.min.js?h=01bb7ae0c0b11509558f2aa83f244399"></script>
+    <script src="assets/js/bs-init.js?h=cd759cd84d0f5ce08e477217e1c37697"></script>
+    <script src="assets/js/Dark-Mode-Switch.js?h=5a9677748c500d8e3056d2757fdf8c02"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/jquery.tablesorter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-filter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/js/widgets/widget-storage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="assets/js/Ludens---Dark-Mode-Admin-Dashboard-1.js?h=06c93bc70611575b0c0ad4e1a835f53c"></script>
+    <script src="assets/js/Ludens---Dark-Mode-Admin-Dashboard-2.js?h=71f72f1f5d2f4d19abe9ac1e28d480ce"></script>
+    <script src="assets/js/Ludens---Dark-Mode-Admin-Dashboard-3.js?h=131d9d7c45983fd045722a6686c99bb0"></script>
+    <script src="assets/js/Ludens---Dark-Mode-Admin-Dashboard-4.js?h=d35779c976fae83aeb60c7139d309318"></script>
+    <script src="assets/js/Ludens---Dark-Mode-Admin-Dashboard-5.js?h=6b750b5ff5de2cfe64342646c0123d10"></script>
+    <script src="assets/js/Ludens---Dark-Mode-Admin-Dashboard.js?h=0b5112c06ff3094624f33df374e70be1"></script>
+    <script src="assets/js/Navbarbuttonsignupsignin-modal-form.js?h=9ce049da3c28fd2ded69977163ac47a3"></script>
+</body>
+
+</html>
